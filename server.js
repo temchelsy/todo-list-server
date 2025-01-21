@@ -20,14 +20,14 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/coding-ta
 // Models
 const Task = require('./models/Task');
 const Comment = require('./models/Comment');
-const CodingProblem = require('./models/CodingProblem');
+// const CodingProblem = require('./models/CodingProblem');
 
 // Public routes
 app.use('/api/auth', require('./routes/auth'));
 
 // Protected routes
 app.use('/api/tasks', auth, require('./routes/tasks'));
-app.use('/api/problems', auth, require('./routes/problems'));
+// app.use('/api/problems', auth, require('./routes/problems'));
 app.use('/api/comments', auth, require('./routes/comments'));
 
 const PORT = process.env.PORT || 5000;
